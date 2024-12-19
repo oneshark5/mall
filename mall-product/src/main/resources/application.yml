@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://47.94.93.209:3312/mall_pms # 连接商品服务数据库
+    driver-class-name: com.mysql.jdbc.Driver
+
+#    url: jdbc:mysql://192.168.56.10:3306/guli_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+
+# MapperScan
+# sql映射文件位置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+#  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto # 主键自增
+
+#classpath 和 classpath* 区别：
+#classpath：只会到你的class路径中查找找文件;
+#classpath*：不仅包含class路径，还包括jar文件中(class路径)进行查找
+#
+#classpath*的使用：当项目中有多个classpath路径，并同时加载多个classpath路径下（此种情况多数不会遇到）的文件，*就发挥了作用，如果不加*，则表示仅仅加载第一个classpath路径。
+#————————————————
+#
+#                            blog.csdn.net/hancoder 可以打赏后索要离线md文件，打赏码在谷粒笔记的文尾。博主目前就职于阿里云，有需要可内推
+#
+#原文链接：https://blog.csdn.net/hancoder/article/details/106922139
