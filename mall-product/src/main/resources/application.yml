@@ -15,6 +15,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto # 主键自增
+# 这里先设置成主键自增，后面讲分库分表 再讲其他主键自增规则
 
 #classpath 和 classpath* 区别：
 #classpath：只会到你的class路径中查找找文件;

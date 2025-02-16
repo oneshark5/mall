@@ -18,7 +18,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *          2) 在application.yml配置数据源相关信息
  *      2、配置Mybatis-Plus;
  *          1) 使用MapperScan，表明mapper文件位置
- *          2) 告诉Mybatis-Plus，sql映射文件位置
+ *          2) 告诉Mybatis-Plus，sql映射文件位置（在app yml文件中配置）
+ *
  */
 @MapperScan("com/mall/mallproduct/dao")
 @SpringBootApplication

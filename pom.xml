@@ -11,6 +11,7 @@
 
     <!--  聚合小服务  -->
     <modules>
+        <module>mall-common</module>
         <module>mall-coupon</module>
         <module>mall-member</module>
         <module>mall-order</module>
@@ -18,7 +19,7 @@
         <module>mall-ware</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
-        <module>mall-common</module>
+
 
     </modules>
 
