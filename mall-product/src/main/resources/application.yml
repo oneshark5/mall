@@ -23,3 +23,7 @@ mybatis-plus:
 #
 #classpath*的使用：当项目中有多个classpath路径，并同时加载多个classpath路径下（此种情况多数不会遇到）的文件，*就发挥了作用，如果不加*，则表示仅仅加载第一个classpath路径。
 #———————————————
+
+# 编排端口
+server:
+  port: 10000
