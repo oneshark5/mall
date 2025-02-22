@@ -1,16 +1,36 @@
 spring:
+  application:
+    name: mall-coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#      config:
+#        server-addr: 127.0.0.1:8848  # 确保配置服务地址
+#        data-id: mall-coupon.properties  # 明确指定 dataId
+#  config:
+##    import: nacos:application.yml
+#    import: "optional:nacos://127.0.0.1:8848"
   datasource:
     username: root
     password: root
     url: jdbc:mysql://47.94.93.209:3312/mall_sms # 连接商品服务数据库
     driver-class-name: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://192.168.56.10:3306/guli_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-  application:
-    name: mall-coupon
+
+
+#  config:
+#    import: "optional:nacos://127.0.0.1:8848"
+#  config:
+#    import:
+#      - nacos:nacos-config-example.properties?refreshEnabled=true&group=DEFAULT_GROUP
+
 
 
 # sql映射文件位置
