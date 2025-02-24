@@ -6,6 +6,7 @@ import java.util.Map;
 // import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,11 +22,12 @@ import com.common.utils.R;
 
 /**
  * 优惠券信息
- *
+ * 注解信息： 刷新配置@RefreshScope
  * @author bobo
  * @email oneshark5@163.com
  * @date 2025-02-16 13:19:26
  */
+@RefreshScope
 @RestController
 @RequestMapping("mallcoupon/coupon")
 public class CouponController {
@@ -36,9 +38,9 @@ public class CouponController {
      * 采用application.properties配置的内容，可以用@Value注解获取
      * @return
      */
-    @Value("${user.name}")
+    @Value("${coupon.user.name}")
     private String name;
-    @Value("${user.age}")
+    @Value("${coupon.user.age}")
     private String age;
     @RequestMapping("/test")
     public R test () {
