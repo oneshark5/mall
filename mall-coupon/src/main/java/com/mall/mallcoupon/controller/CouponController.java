@@ -5,6 +5,7 @@ import java.util.Map;
 
 // import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,19 @@ import com.common.utils.R;
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    /**
+     * 采用application.properties配置的内容，可以用@Value注解获取
+     * @return
+     */
+    @Value("${user.name}")
+    private String name;
+    @Value("${user.age}")
+    private String age;
+    @RequestMapping("/test")
+    public R test () {
+        return R.ok().put("name",name).put("age",age);
+    }
 
     @RequestMapping("member/list")
     public R membercoupons(){
