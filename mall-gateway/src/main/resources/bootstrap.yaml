@@ -1,3 +1,4 @@
+#使用Nacos配置文件功能
 spring:
   application:
     name: mall-gateway
@@ -6,5 +7,5 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
-        namespace: 2ae17aa1-7da7-4d13-9a91-100da4724244 # 用于配置不同的命名空间
+#        namespace: 2ae17aa1-7da7-4d13-9a91-100da4724244 # 用于配置不同的命名空间
 #        group: # 配置分组
