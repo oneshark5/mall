@@ -1,9 +1,6 @@
 #GateWay And Nacos discovery  Nacos注册中心、数据源、端口号等配置
 spring:
   cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
     gateway:
       routes:
         #Query A 参数有A就行，Query B,C 参数B的值为C即可
@@ -29,7 +26,19 @@ spring:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
 ## 前端项目，/api 代api的都路由到renren_fast
 #  http://localhost:88/api/captcha.jpg  转成  http://localhost:8080/renren-fast/captcha.jpg
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedHeaders: "*"
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            add-to-simple-url-handler-mapping: true
   application:
     name: mall-gateway
 server:
   port: 88
+
+#  nacos:
+#    discovery:
+#      server-addr: 127.0.0.1:8848
