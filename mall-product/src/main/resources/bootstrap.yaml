@@ -1,0 +1,11 @@
+#使用Nacos配置文件功能   --- 配置中心
+spring:
+  application:
+    name: mall-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: ae9a720b-5aa8-40b5-b733-20f7ba4002d5 # 用于配置不同的命名空间
+#        group: # 配置分组
