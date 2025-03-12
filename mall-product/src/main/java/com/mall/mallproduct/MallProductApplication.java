@@ -21,6 +21,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *          1) 使用MapperScan，表明mapper文件位置
  *          2) 告诉Mybatis-Plus，sql映射文件位置（在app yml文件中配置）
  *
+ * 2、逻辑删除
+ *  1）、修改application配置
+ *  2）、添加注解（逻辑删除字段）
  */
 @MapperScan("com/mall/mallproduct/dao")
 @SpringBootApplication
