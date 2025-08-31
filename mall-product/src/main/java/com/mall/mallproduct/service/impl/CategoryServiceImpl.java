@@ -56,14 +56,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
      */
     @Override
     public void removeMenuByIds(List<Long> asList) {
-        // TODO 检查当前删除的菜单，是否被别的低副引用
+        // TODO 检查当前删除的菜单，是否被别的地方引用
 
         // 实际删除
         baseMapper.deleteBatchIds(asList);
 
         // 常用的是逻辑删除（设置标志位，表示此处为删除）
-
-
     }
 
     /**
@@ -78,8 +76,6 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
                 })
                 .sorted(Comparator.comparingInt(menu -> (menu.getSort() == null ? 0 : menu.getSort())))
                 .collect(Collectors.toList());
-
-
     }
 
 }

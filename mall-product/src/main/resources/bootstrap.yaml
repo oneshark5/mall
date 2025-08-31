@@ -7,5 +7,5 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
-        namespace: ae9a720b-5aa8-40b5-b733-20f7ba4002d5 # 用于配置不同的命名空间
+        namespace: 05f6943b-bbfa-4c0b-92b7-861a9ec07130 # 用于配置不同的命名空间
 #        group: # 配置分组

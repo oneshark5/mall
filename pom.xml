@@ -18,6 +18,8 @@
         <module>mall-product</module>
         <module>mall-ware</module>
         <module>mall-gateway</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
     </modules>
 
     <!--  这里的属性会被子模块继承（以当前电脑版本为主）  -->
